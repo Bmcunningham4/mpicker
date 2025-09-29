@@ -1,0 +1,97 @@
+/* Root app styling */
+.app {
+  text-align: center;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  padding: 2rem;
+  background-color: #fdf6f0; /* subtle warm background */
+  min-height: 100vh;
+}
+
+/* Card container */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* 24px */
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Individual card */
+.card {
+  width: 15rem; /* ~240px */
+  height: 6rem; /* ~96px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem; /* 16px */
+  color: white;
+  font-size: 1.2rem; /* 19px */
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15); /* 10px 20px */
+}
+
+/* Alternating colors using nth-child */
+.card-list .card:nth-child(3n + 1) {
+  background-color: #ff6b6b; /* red-ish */
+}
+
+.card-list .card:nth-child(3n + 2) {
+  background-color: #4ecdc4; /* teal */
+}
+
+.card-list .card:nth-child(3n + 3) {
+  background-color: #f7b733; /* yellow-orange */
+}
+
+/* Welcome / final messages */
+h1,
+h2 {
+  margin: 0;
+  padding: 1rem 0;
+  color: #333;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+.yum-paragraph {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: rgb(80, 6, 184);
+  word-wrap: break-word;
+}
+
+/* Optional responsive tweak for very small phones */
+@media (max-width: 360px) {
+  .card {
+    width: 12rem; /* ~192px */
+    height: 5rem; /* ~80px */
+    font-size: 1rem; /* 16px */
+  }
+}
