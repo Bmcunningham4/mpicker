@@ -3,7 +3,7 @@
   text-align: center;
   font-family: "Segoe UI", Roboto, sans-serif;
   padding: 2rem;
-  background-color: #fdf6f0; /* subtle warm background */
+  background-color: #fdf6f0;
   min-height: 100vh;
 }
 
@@ -11,21 +11,21 @@
 .card-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* 24px */
+  gap: 1.5rem;
   align-items: center;
   margin-top: 2rem;
 }
 
 /* Individual card */
 .card {
-  width: 15rem; /* ~240px */
-  height: 6rem; /* ~96px */
+  width: 15rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1rem; /* 16px */
+  border-radius: 1rem;
   color: white;
-  font-size: 1.2rem; /* 19px */
+  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
   transition:
@@ -36,21 +36,31 @@
 /* Hover effect */
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15); /* 10px 20px */
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15);
 }
 
-/* Alternating colors using nth-child */
-.card-list .card:nth-child(3n + 1) {
-  background-color: #ff6b6b; /* red-ish */
-}
-
-.card-list .card:nth-child(3n + 2) {
-  background-color: #4ecdc4; /* teal */
-}
-
-.card-list .card:nth-child(3n + 3) {
-  background-color: #f7b733; /* yellow-orange */
-}
+/* Alternating colors using nth-child (7 colors) */
+.card-list .card:nth-child(7n + 1) {
+  background-color: #ff6b6b;
+} /* red */
+.card-list .card:nth-child(7n + 2) {
+  background-color: #4ecdc4;
+} /* teal */
+.card-list .card:nth-child(7n + 3) {
+  background-color: #f7b733;
+} /* yellow-orange */
+.card-list .card:nth-child(7n + 4) {
+  background-color: #845ec2;
+} /* purple */
+.card-list .card:nth-child(7n + 5) {
+  background-color: #ff9671;
+} /* coral */
+.card-list .card:nth-child(7n + 6) {
+  background-color: #00c9a7;
+} /* mint */
+.card-list .card:nth-child(7n + 7) {
+  background-color: #ffc75f;
+} /* gold */
 
 /* Welcome / final messages */
 h1,
@@ -60,6 +70,7 @@ h2 {
   color: #333;
 }
 
+/* Back button */
 .back-button {
   position: absolute;
   top: 1rem;
@@ -78,20 +89,21 @@ h2 {
   background-color: #555;
 }
 
+/* YUM paragraph */
 .yum-paragraph {
   margin-top: 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: center;
-  color: rgb(80, 6, 184);
+  color: #ff6b6b;
   word-wrap: break-word;
 }
 
-/* Optional responsive tweak for very small phones */
-@media (max-width: 360px) {
+/* Responsive tweaks for small phones */
+@media (max-width: 22.5rem) {
   .card {
-    width: 12rem; /* ~192px */
-    height: 5rem; /* ~80px */
-    font-size: 1rem; /* 16px */
+    width: 12rem;
+    height: 5rem;
+    font-size: 1rem;
   }
 }
